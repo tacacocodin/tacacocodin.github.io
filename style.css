@@ -1,0 +1,20 @@
+.center{
+  text-align: center;
+}
+
+.container{
+  padding: 10px;
+}
+
+.bar{
+  background: #fffb1b;
+  padding: 14px 8px;
+}
+
+.text-black{
+  color:black;
+}
+
+.div-center{
+  float: center;
+}
