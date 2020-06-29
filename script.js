@@ -6,6 +6,8 @@ var template = Handlebars.compile($('#evento-template').html());
 // Load top five HR leaders.
 $('#evento').sheetrock({
   url: mySpreadsheet,
+  query: "select A,B,C,D,E",
+  labels: ['Hora', 'Performance', 'Performers', 'Contacto', 'url'],
   rowTemplate: template
 });
 
