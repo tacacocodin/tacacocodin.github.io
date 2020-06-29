@@ -4,13 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+  <link rel="icon" href="img/chiqui.jpg">
 	<title>TACACOCODIN'</title>
 	
 	<link href="bootstrap.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  style="background-image: url('https://im5.ezgif.com/tmp/ezgif-5-770cce4acdfa.gif');">
+<body  style="background-image: url('img/fondo.gif');">
 	<header>
 		<div class="bs-component">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -116,7 +117,7 @@
                     <th class="" scope="row">{{cells.Hora}}</th>
                     <td class="">{{cells.Performance}}</td>
                     <td class="">{{cells.Performers}}</td>
-                    <td class="">{{cells.Contacto}}</td>
+                    <td class=""><a href="{{cells.url}}">{{cells.Contacto}}</a></td>
                    
                   </tr>
                    </script>

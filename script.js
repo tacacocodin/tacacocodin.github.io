@@ -8,3 +8,5 @@ $('#evento').sheetrock({
   url: mySpreadsheet,
   rowTemplate: template
 });
+
+// arreglar headers y cambiar por labels
