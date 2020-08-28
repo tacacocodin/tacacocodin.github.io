@@ -1,15 +1,15 @@
- var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1T7nWIVk8KFPBE99bxboeIzI9Dclc70XZFmh_BUGTlb4/edit#gid=0'
+/* var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1T7nWIVk8KFPBE99bxboeIzI9Dclc70XZFmh_BUGTlb4/edit#gid=0'*/
 
 // Compile the Handlebars template for HR leaders.
-var template = Handlebars.compile($('#evento-template').html());
+/*var template = Handlebars.compile($('#evento-template').html());*/
 
 // Load top five HR leaders.
-$('#evento').sheetrock({
+/*$('#evento').sheetrock({
   url: mySpreadsheet,
   query: "select A,B,C,D,E",
   labels: ['Hora', 'Performance', 'Performers', 'Contacto', 'url'],
   rowTemplate: template
-});
+});*/
 
 (function(){
   _386.magicCursor();
