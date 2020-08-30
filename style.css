@@ -3,7 +3,7 @@
 }
 
 .container{
-  padding: 10px;
+  padding: 0px;
 }
 
 .bar{
@@ -17,4 +17,51 @@
 
 .div-center{
   float: center;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.parent div {
+ /*padding: 50px;
+ background-color: rgba(0,0,0,0.5);*/
+ grid-row-start: 1;
+ grid-column-start: 1;
+}
+
+.child1{
+  padding-left:10px!important;
+}
+
+.un{
+  opacity:0;
+}
+/*
+.un:hover {
+  opacity: 1;
+}*/
+
+.parent:hover .child1{
+opacity:0;
+}
+
+.parent:hover .un{
+opacity:1;
+}
+
+.imgEvento{
+    display:none;
+  }
+
+
+@media only screen and (max-width: 960px) {
+  .parent {
+    display: none;
+  }
+
+  .imgEvento{
+    display:block;
+  }
 }
