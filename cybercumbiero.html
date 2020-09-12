@@ -14,7 +14,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  style="background-image: url('img/fondo.gif');" class="bootstra-enable-cursor";>
+<body  >
 <!--class="bootstra-enable-cursor"-->
 	<header>
 		<div class="bs-component">
@@ -31,11 +31,94 @@
 	</div>
   <!--<br>-->
 <div  id="about" class="container">
+  <!--<div class="input">
+  <input type="text" required/>
+  <a>Email</a>
+</div>-->
+    
   <div class="jumbotron">
-	<p class="center">Acá aparecerá la información para ingresar al espacio y a las transmisiones :) Te contactaremos por email con más información días antes del evento.
-  </p>
-  </div>  
+    <div class="container">
+ 
+  <ul id="e">
+     <h1>Quedan
+    <div><span id="hours"></span> Horas</div>
+    <div><span id="minutes"></span> Minutos</div>
+    <div><span id="seconds"></span> Segundos</div>
+    </h1>
+  </ul>
+  
 </div>
+	<p class="center">
+    <img style="width:100%;" src="img/cyberclean.png" alt="">
+  </p>
+  <!--<div  id="ee" style="position:absolute;top:100px;background:transparent;left:200px;right:100px;display:none;">
+    <input type="text" placeholder="Ingrese su código de entrada">
+    <button type="submit" class="btn">Confirmar</button>
+    </div>
+  </div>-->
+ <form  id="ee" style="position:absolute;top:100px;background:transparent;left:200px;right:100px;display:none;" class="form1" action="https://cybercumbiero.glitch.me" onsubmit="return onCheck(this)?true:false;">
+
+
+
+                 <input type="text" placeholder="Ingrese su código de entrada" name="pass">
+                <br/>
+
+   
+        <div class="button">
+            <input class="btn" type="submit" value="Validar" />
+       </div>
+    </form>
+</div>
+
+<script>
+  const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date('Sep 12, 2020 17:55:00').getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+if (distance < 0) {
+clearInterval(x);
+ document.getElementById("e").style.display = "none"
+  document.getElementById("ee").style.display = "block"
+}
+
+    }, second)
+</script>
+<script>
+function onCheck(form) {
+
+
+     var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+
+
+
+     // Check if a value exists in the fruits array
+
+     if (fruits.indexOf(form.pass.value) !== -1) {
+
+       alert("Pase Adelante")
+       console.log('a')
+       return true
+
+     } else {
+
+       alert("Incorrecto")
+       return false
+
+     }
+
+   }
+</script>
 
   <footer></footer>
 </html>
